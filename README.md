@@ -26,10 +26,18 @@ Your mission is to implement an **agentic chatbot** that helps clients answer qu
    * Vector‑database or RAG lookup.  
    * Classifier to ensure quality of the answer.
 
-4. **Persist conversations** so a user can resume from where they left off.  
+4. **Evaluate and Score Agent Responses**  
+   * Implement an evaluation process to assess the quality and relevance of the agent's answers.  
+   * Use the evaluation results to iteratively improve the agent's reasoning and tool selection.
+
+5. **Finetune the Agent Based on Feedback**  
+   * Incorporate user feedback and evaluation outcomes to continuously finetune the agent's models or decision logic.  
+   * This may involve retraining components, updating prompts, or refining tool selection strategies to enhance performance over time.
+
+6. **Persist conversations** so a user can resume from where they left off.  
    * Support multiple concurrent chats per user.
 
-5. **Expose an HTTP interface** (REST, SSE, or WebSocket) that allows a UI to stream the agent’s intermediate reasoning (“thoughts”) and final answers.
+7. **Expose an HTTP interface** (REST, SSE, or WebSocket) that allows a UI to stream the agent’s intermediate reasoning (“thoughts”) and final answers.
 
 You may implement the service in **Go 1.22+ or Python 3.11+**. Mixing in other languages or frameworks for tooling is fine if it helps.
 
