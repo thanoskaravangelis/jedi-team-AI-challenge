@@ -60,8 +60,9 @@ Provide a short guide (README section or shell script) that covers:
 
 1. **Startup** – how to launch the service (and any supporting services such as a vector DB).  
 2. **Configuration** – environment variables, API keys, or model endpoints needed.  
-3. **Testing** – how to run unit and integration tests.  
-4. **Assumptions** – anything non‑obvious you decided (e.g., which LLM provider you picked, why a specific vector DB).
+3. **Testing** – how to run unit and integration tests.
+4. **Evaluation** – how to evaluate the performance of the agent.
+5. **Assumptions** – anything non‑obvious you decided (e.g., which LLM provider you picked, why a specific vector DB).
 
 ---
 
