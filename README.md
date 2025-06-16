@@ -26,10 +26,18 @@ Your mission is to implement an **agentic chatbot** that helps clients answer qu
    * Vector‑database or RAG lookup.  
    * Classifier to ensure quality of the answer.
 
-4. **Persist conversations** so a user can resume from where they left off.  
+4. **Evaluate and Score Agent Responses**  
+   * Implement an evaluation process to assess the quality and relevance of the agent's answers.  
+   * Use the evaluation results to iteratively improve the agent's reasoning and tool selection.
+
+5. **Finetune the Agent Based on Feedback**  
+   * Incorporate user feedback and evaluation outcomes to continuously finetune the agent's models or decision logic.  
+   * This may involve retraining components, updating prompts, or refining tool selection strategies to enhance performance over time.
+
+6. **Persist conversations** so a user can resume from where they left off.  
    * Support multiple concurrent chats per user.
 
-5. **Expose an HTTP interface** (REST, SSE, or WebSocket) that allows a UI to stream the agent’s intermediate reasoning (“thoughts”) and final answers.
+7. **Expose an HTTP interface** (REST, SSE, or WebSocket) that allows a UI to stream the agent’s intermediate reasoning (“thoughts”) and final answers.
 
 You may implement the service in **Go 1.22+ or Python 3.11+**. Mixing in other languages or frameworks for tooling is fine if it helps.
 
@@ -52,8 +60,9 @@ Provide a short guide (README section or shell script) that covers:
 
 1. **Startup** – how to launch the service (and any supporting services such as a vector DB).  
 2. **Configuration** – environment variables, API keys, or model endpoints needed.  
-3. **Testing** – how to run unit and integration tests.  
-4. **Assumptions** – anything non‑obvious you decided (e.g., which LLM provider you picked, why a specific vector DB).
+3. **Testing** – how to run unit and integration tests.
+4. **Evaluation** – how to evaluate the performance of the agent.
+5. **Assumptions** – anything non‑obvious you decided (e.g., which LLM provider you picked, why a specific vector DB).
 
 ---
 
