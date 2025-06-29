@@ -1,0 +1,14 @@
+# pycache files
+__pycache__/
+.pytest_cache/
+
+# environment variables
+.env
+
+# python environment
+venv
+
+# database files
+jedi_agent.db
+vector_db
+

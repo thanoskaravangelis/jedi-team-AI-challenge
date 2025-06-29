@@ -1,0 +1,133 @@
+/* Message Feedback Styles */
+.message-feedback {
+  margin-top: 0.75em;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.feedback-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  color: var(--text-secondary, #666);
+}
+
+.feedback-btn:hover:not(:disabled) {
+  background-color: var(--bg-hover, rgba(0, 0, 0, 0.05));
+  transform: scale(1.05);
+}
+
+.feedback-btn:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.feedback-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.feedback-btn i {
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+/* Light mode colors */
+[data-theme="light"] .feedback-btn.thumbs-up.selected {
+  color: #22c55e;
+  background-color: rgba(34, 197, 94, 0.1);
+}
+
+[data-theme="light"] .feedback-btn.thumbs-down.selected {
+  color: #ef4444;
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+[data-theme="light"] .feedback-btn.thumbs-up.selected i {
+  color: #22c55e;
+}
+
+[data-theme="light"] .feedback-btn.thumbs-down.selected i {
+  color: #ef4444;
+}
+
+/* Dark mode colors */
+[data-theme="dark"] .feedback-btn.thumbs-up.selected {
+  color: #10b981;
+  background-color: rgba(16, 185, 129, 0.15);
+}
+
+[data-theme="dark"] .feedback-btn.thumbs-down.selected {
+  color: #f87171;
+  background-color: rgba(248, 113, 113, 0.15);
+}
+
+[data-theme="dark"] .feedback-btn.thumbs-up.selected i {
+  color: #10b981;
+}
+
+[data-theme="dark"] .feedback-btn.thumbs-down.selected i {
+  color: #f87171;
+}
+
+/* Status messages */
+.feedback-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-left: 8px;
+}
+
+.feedback-status.submitting {
+  color: var(--text-secondary, #666);
+}
+
+.feedback-status.success {
+  color: var(--success-color, #22c55e);
+}
+
+[data-theme="dark"] .feedback-status.success {
+  color: #10b981;
+}
+
+.feedback-status i {
+  font-size: 12px;
+}
+
+/* Animation for success message */
+.feedback-status.success {
+  animation: fadeInScale 0.3s ease;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Spinner animation for submitting state */
+.fa-spinner.fa-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

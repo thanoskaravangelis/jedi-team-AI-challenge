@@ -1,0 +1,67 @@
+/* Message width fix */
+.message-content {
+  flex: 1;
+  max-width: 70%;
+  width: fit-content;
+}
+
+.message.user .message-content {
+  text-align: right;
+  margin-left: auto;
+}
+
+/* Thinking component styles */
+.thinking-component {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding: 16px 20px;
+  background: var(--bg-secondary);
+  border-radius: 20px;
+  border: 2px solid #10a37f;
+  max-width: fit-content;
+  animation: pulse-border 2s ease-in-out infinite;
+}
+
+.thinking-component .thinking-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #10a37f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 12px;
+  animation: pulse-glow 1.5s ease-in-out infinite;
+}
+
+.thinking-text {
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+@keyframes pulse-border {
+  0%, 100% {
+    border-color: #10a37f;
+    box-shadow: 0 0 0 0 rgba(16, 163, 127, 0.4);
+  }
+  50% {
+    border-color: #0d8968;
+    box-shadow: 0 0 0 8px rgba(16, 163, 127, 0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    background: #10a37f;
+    transform: scale(1);
+  }
+  50% {
+    background: #0d8968;
+    transform: scale(1.1);
+  }
+}

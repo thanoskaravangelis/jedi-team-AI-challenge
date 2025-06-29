@@ -1,0 +1,45 @@
+.feedback-widget {
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  z-index: 1000;
+  display: flex;
+  gap: 12px;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+.feedback-btn {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.1s;
+}
+.feedback-btn:active {
+  transform: scale(0.92);
+}
+.feedback-btn.selected {
+  color: #2ecc40;
+}
+.feedback-btn.dislike.selected {
+  color: #ff4136;
+}
+.feedback-confirm-widget {
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  z-index: 1001;
+  background: none;
+  color: #222;
+  font-size: 1.1rem;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  box-shadow: none;
+  pointer-events: none;
+  font-weight: bold;
+  background: rgba(255,255,255,0.85);
+}

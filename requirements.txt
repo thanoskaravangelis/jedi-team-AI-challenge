@@ -1,0 +1,41 @@
+# Core Framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+python-multipart==0.0.6
+
+# LangChain & AI (Fixed compatible versions)
+langchain==0.2.16
+langchain-openai==0.1.23
+langchain-community==0.2.16
+langsmith>=0.1.112,<0.2.0
+openai>=1.40.0
+groq==0.4.1
+
+# Vector Database
+chromadb==0.4.22
+sentence-transformers==2.7.0
+huggingface-hub==0.20.3
+
+# Database
+sqlalchemy==2.0.23
+alembic==1.13.1
+
+# Web Search
+tavily-python==0.3.3
+
+# Utilities
+python-dotenv==1.0.0
+pandas==2.1.4
+numpy==1.24.3
+asyncio-mqtt==0.16.1
+
+# Development & Testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+httpx==0.25.2
+black==23.11.0
+flake8==6.1.0
+
+# Logging & Monitoring
+structlog==23.2.0
